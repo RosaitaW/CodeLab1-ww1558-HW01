@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerControler : MonoBehaviour
+public class PlayerController2 : MonoBehaviour
 {
     public GameObject PlayerA;
     public float force;
@@ -11,8 +11,8 @@ public class PlayerControler : MonoBehaviour
     public KeyCode down;
     public KeyCode left;
     public KeyCode right;
-    public int score = 0;
-    public static PlayerControler instance;
+    public int score2 = 0;
+    public static PlayerController2 instance;
 
     private void Awake()
     {
@@ -50,10 +50,11 @@ public class PlayerControler : MonoBehaviour
         {
             rb.AddForce(Vector2.up * force);
         }
-        else if (Input.GetKey(down)) {
+        else if (Input.GetKey(down))
+        {
             rb.AddForce(Vector2.down * force);
         }
 
 
-        }
     }
+}
